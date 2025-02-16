@@ -34,6 +34,17 @@ union Data {
     char str[50];
 };
 
+// enum EngineType { Gasoline, Diesel, Electric };
+
+struct Vehicle {
+    char comp[50];
+    char mod[50];
+    int year;
+    char eng[50];
+    // enum EngineType eng;
+};
+
+
 int task1() {
     int n;
     scanf("%d", &n);
@@ -116,7 +127,57 @@ int task5() {
     return 0;
 }
 
+int task6() {
+    int n;
+    scanf("%d", &n);
+
+    struct Vehicle *vehicles = malloc(sizeof(struct Vehicle) * n);
+
+    // for (int i = 0; i < n; i++) {
+    //     scanf("%s %s %d %d", vehicles[i].comp, vehicles[i].mod, &vehicles[i].year, &vehicles[i].eng);
+    // }
+    // for (int i = 0; i < n; i++) {
+    //     printf("%s\n", vehicles[i].eng);
+    //     if (vehicles[i].eng == Gasoline) {
+    //         printf("Company: %s\nModel: %s\nYear: %d\nEngineType: %s\n\n", vehicles[i].comp, vehicles[i].mod, vehicles[i].year, "Gasoline");
+    //     }else if (vehicles[i].eng == Diesel) {
+    //         printf("Company: %s\nModel: %s\nYear: %d\nEngineType: %s\n\n", vehicles[i].comp, vehicles[i].mod, vehicles[i].year, "Diesel");
+    //         continue;
+    //     }else if (vehicles[i].eng == Electric) {
+    //         printf("Company: %s\nModel: %s\nYear: %d\nEngineType: %s\n\n", vehicles[i].comp, vehicles[i].mod, vehicles[i].year, "Electric");
+    //         continue;
+    //     }
+        
+    // }
+
+    for (int i = 0; i < n; i++) {
+        scanf("%s%s%d%s", vehicles[i].comp, vehicles[i].mod, &vehicles[i].year, vehicles[i].eng);
+    }
+    for (int i = 0; i < n; i++) {
+        printf("Company: %s\nModel: %s\nYear: %d\nEngineType: %s\n\n", vehicles[i].comp, vehicles[i].mod, vehicles[i].year, vehicles[i].eng);
+    } 
+    
+    return 0;
+}
+
+int task7() {
+    int n;
+    scanf("%d", &n);
+
+    struct Student *student = malloc(n * sizeof(struct Student));
+
+    for (int i=0; i<0; i++) {
+        scanf("%s %d %f", student[i].name, &student[i].age, &student[i].gpa);
+    }
+
+    for (int i=0; i<0; i++) {
+        printf("Name: %s \nAge: %d \nGPA: %f", student[i].name, student[i].age, student[i].gpa);
+    }
+
+    return 0;
+}
+
 int main() {
-    task5();
+    task7();
     return 0;
 }
