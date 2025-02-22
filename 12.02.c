@@ -164,13 +164,13 @@ int task7() {
     int n;
     scanf("%d", &n);
 
-    struct Student *student = malloc(n * sizeof(struct Student));
+    struct Student *student = malloc(sizeof(struct Student) * n);
 
-    for (int i=0; i<0; i++) {
+    for (int i=0; i<n; i++) {
         scanf("%s %d %f", student[i].name, &student[i].age, &student[i].gpa);
     }
 
-    for (int i=0; i<0; i++) {
+    for (int i=0; i<n; i++) {
         printf("Name: %s \nAge: %d \nGPA: %f", student[i].name, student[i].age, student[i].gpa);
     }
 
