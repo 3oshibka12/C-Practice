@@ -57,7 +57,7 @@ int task1() {
     for (int i = 0; i < n; i++) {
         printf("Name: %s\nAge: %d\nGPA: %.2f\n\n", students[i].name, students[i].age, students[i].gpa);
     }
-    
+    free(students);
     return 0;
 }
 
@@ -73,7 +73,7 @@ int task2() {
     for (int i = 0; i < n; i++) {
         printf("Item: %s\nQuantity: %d\nPrice: %.2f\n\n", items[i].name, items[i].quantity, items[i].price);
     }
-    
+    free(items);
     return 0;
 }
 
@@ -89,7 +89,7 @@ int task3() {
     for (int i = 0; i < n; i++) {
         printf("Event: %s\nDate: %d/%d/%d\nDescription: %s\n\n", events[i].name, events[i].day, events[i].month, events[i].year, events[i].description);
     }
-    
+    free(events);
     return 0;
 }
 
@@ -105,7 +105,7 @@ int task4() {
     for (int i = 0; i < n; i++) {
         printf("Name: %s\nPosition: %s\nSalary: %.2f\n\n", employees[i].name, employees[i].position, employees[i].salary);
     }
-    
+    free(employees);
     return 0;
 }
 
@@ -123,7 +123,7 @@ int task5() {
         scanf("%s", data.str);
         printf("String: %s\n", data.str);
     }
-    
+    free(data);
     return 0;
 }
 
@@ -156,7 +156,7 @@ int task6() {
     for (int i = 0; i < n; i++) {
         printf("Company: %s\nModel: %s\nYear: %d\nEngineType: %s\n\n", vehicles[i].comp, vehicles[i].mod, vehicles[i].year, vehicles[i].eng);
     } 
-    
+    free(vehicles);
     return 0;
 }
 
@@ -173,11 +173,11 @@ int task7() {
     for (int i=0; i<n; i++) {
         printf("Name: %s \nAge: %d \nGPA: %f", student[i].name, student[i].age, student[i].gpa);
     }
-
+    free(student);
     return 0;
 }
 
 int main() {
-    task7();
+    task5();
     return 0;
 }

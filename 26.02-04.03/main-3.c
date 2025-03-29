@@ -88,7 +88,7 @@ void task4() {
     char str[100];
     scanf("%s", str);
     
-    if (strlen(str) == 11 && !strncmp(str, "launch-2025", 11)) {
+    if (strlen(str) == 11 && !strcasecmp(str, "launch-2025")) {
         printf("Код принят\n");
     } else {
         printf("Ошибка: неверный код!\n");
@@ -107,6 +107,6 @@ void task5() {
 }
 
 int main() {
-    task5();
+    task4();
     return 0;
 }
